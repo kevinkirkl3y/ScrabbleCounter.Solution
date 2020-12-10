@@ -30,7 +30,6 @@ namespace ScrabbleCounter
         {
           switch (letter)
           {
-            case 'a':
             case 'e':
             case 'i':
             case 'o':
