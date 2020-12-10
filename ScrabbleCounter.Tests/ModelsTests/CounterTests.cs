@@ -46,5 +46,20 @@ namespace ScrabbleCounter.Tests
       Word newWord = new Word(test);
       newWord.Letters.Any();
     }
+    [TestMethod]
+    public void Score_ReturnsIntegerValueForScore_True()
+    {
+    string test = "test";
+    Word newWord = new Word(test);
+    Assert.AreEqual(typeof(int), newWord.Score.GetType());
+    }
+    [TestMethod]
+    public void Score_CorrectlyCalculatesScoreOfInputtedWord_True()
+    {
+      string test = "qi";
+      Word newWord = new Word(test);
+      Assert.AreEqual(11,newWord.Score);
+    }
+
   }
 }
